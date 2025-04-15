@@ -68,13 +68,15 @@
   }
   
   .board {
-    height: 450px;
-    width: 400px;
+    height: auto;
+    max-width: 400px;
+    width: 100%;
     display: flex;
     margin: auto;
     flex-direction: column;
     justify-content: center;
   }
+  
   
   .row1, .row2, .row3 {
     display: flex;
@@ -157,3 +159,57 @@
   .popup button:active {
     transform: translateY(1px);
   }
+
+  /* Add at the end of your CSS file */
+
+@media screen and (max-width: 768px) {
+    .title {
+      font-size: 36px;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 10px;
+    }
+  
+    .title img {
+      height: 40px;
+      padding: 10px;
+    }
+  
+    .board {
+      width: 90%;
+      height: auto;
+      margin-top: 30px;
+    }
+  
+    .boxes {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .boxes img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .reset {
+      width: 80%;
+      height: 60px;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  
+    .popup {
+      width: 95%;
+      padding: 20px 20px;
+    }
+  
+    .popup h2 {
+      font-size: 22px;
+    }
+  
+    .popup button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
